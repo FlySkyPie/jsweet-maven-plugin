@@ -4,14 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.jsweet</groupId>
 	<artifactId>jsweet-maven-plugin</artifactId>
-	<version>${jsweet.transpiler.version}</version>
+	<version>3.2.0-SNAPSHOT</version>
 	<name>JSweet maven plugin</name>
 	<description>JSweet maven plugin providing build and clean operations of JSweet sources</description>
 	<url>http://www.jsweet.org</url>
 	<packaging>maven-plugin</packaging>
 
 	<properties>
-		<jsweet.transpiler.version>3.2.0-SNAPSHOT</jsweet.transpiler.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version.release>11</java.version.release>
 		<java.version>1.${java.version.release}</java.version>
@@ -201,9 +200,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.jsweet</groupId>
+			<groupId>com.github.FlySkyPie</groupId>
 			<artifactId>jsweet-transpiler</artifactId>
-			<version>${jsweet.transpiler.version}</version>
+			<version>3.1.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -220,31 +219,9 @@
 
 	<repositories>
 		<repository>
-			<id>jsweet-release</id>
-			<url>https://repository.jsweet.org/artifactory/libs-release-local</url>
-		</repository>
-		<repository>
-			<id>jsweet-snapshot</id>
-			<url>https://repository.jsweet.org/artifactory/libs-snapshot-local</url>
-		</repository>
-		<repository>
-			<id>jsweet-external</id>
-			<name>libs-release</name>
-			<url>https://repository.jsweet.org/artifactory/ext-release-local</url>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
 		</repository>
 	</repositories>
 
-
-	<distributionManagement>
-		<repository>
-			<id>jsweet-release</id>
-			<name>plugins-release</name>
-			<url>https://repository.jsweet.org/artifactory/plugins-release-local</url>
-		</repository>
-		<snapshotRepository>
-			<id>jsweet-snapshots</id>
-			<name>plugins-snapshot</name>
-			<url>https://repository.jsweet.org/artifactory/plugins-snapshot-local</url>
-		</snapshotRepository>
-	</distributionManagement>
 </project>
